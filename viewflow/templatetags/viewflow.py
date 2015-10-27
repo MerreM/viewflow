@@ -121,6 +121,9 @@ def include_process_data(context, process):
             "include_process_data template tag requires 'django.core.context_processors.request'"
             " context processor installed.")
 
+    if not process:
+        process = context.get("process")
+
     opts = process.flow_cls._meta
 
     template_names = (
