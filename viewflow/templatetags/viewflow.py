@@ -122,6 +122,9 @@ def include_process_data(context, process):
             " context processor installed.")
 
     if not process:
+        '''
+        Not really sure why context has process in, if it get passed in, but, whatev's
+        '''
         process = context.get("process")
 
     opts = process.flow_cls._meta
