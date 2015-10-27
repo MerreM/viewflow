@@ -43,6 +43,9 @@ def flowurl(parser, token):
             return reverse(url_ref)
         elif isinstance(ref, AbstractProcess):
             kwargs, url_ref = {}, '{}:{}'.format(ref.flow_cls.instance.namespace, url_name if url_name else 'index')
+            '''
+            And I thought my code was hacky.
+            '''
             if url_name in ['details', 'cancel']:
                 kwargs['process_pk'] = ref.pk
             return reverse(url_ref, kwargs=kwargs)

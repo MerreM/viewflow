@@ -270,5 +270,4 @@ class QueueListView(FlowViewPermissionMixin, generic.ListView):
     def get_queryset(self):
         queryset = self.flow_cls.task_cls.objects.user_queue(self.request.user, flow_cls=self.flow_cls) \
             .filter(status=activation.STATUS.NEW).order_by('-created')
-
         return queryset
