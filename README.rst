@@ -2,6 +2,10 @@
 django-viewflow
 ===============
 
+If I could speak RST I'd make this prettier. There are a few bugs in 'ere. 
+
+So I've made a fork to get it into a more workable state.
+
 Reusable workflow library for Django http://viewflow.io.
 
 Needle and thread to tie simple CRUD views and python functions in a complex business process.
